@@ -1,0 +1,20 @@
+
+// Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "~/node_modules/bootstrap/scss/functions";
+
+// Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "~/node_modules/bootstrap/scss/variables";
+@import "~/node_modules/bootstrap/scss/variables-dark";
+
+// Include remainder of required parts
+@import "~/node_modules/bootstrap/scss/maps";
+@import "~/node_modules/bootstrap/scss/mixins";
+@import "~/node_modules/bootstrap/scss/root";
+
+// Include useful bootstrap css style
+@import '~/node_modules/bootstrap/scss/pagination';
+@import '~/node_modules/bootstrap/scss/modal';
+
+// Include admin kit css
+@import '~/assets/css/admin/app.css';
+@import '~/assets/css/admin/style.css';
