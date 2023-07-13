@@ -135,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let data = JSON.parse(document.getElementById("chartjs-dashboard-line").dataset.values);
   let labels = [];
   for (let i = 0; i < 28; i++) labels[i] = i + 1;
+
   // Line chart
   new Chart(document.getElementById("chartjs-dashboard-line"), {
     type: "line",

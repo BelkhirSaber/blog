@@ -179,8 +179,9 @@ abstract class Model{
     $rowsPeriod = $this->getGreatOrEqualDate(Carbon::now()->subDays($lastPeriod));
     $rowsTwoPeriod = $this->getGreatOrEqualDate(Carbon::now()->subDays(($lastPeriod * 2)));
 
-    $percentBeforeLastWeek = (abs((count($rowsTwoPeriod) - count($rowsPeriod))) * 100)  / count($rowsTwoPeriod);
-    $percentLastWeek = (count($rowsPeriod) * 100) / count($rowsTwoPeriod);
+    $divider = count($rowsTwoPeriod)  == 0 ? 1 : count($rowsTwoPeriod);
+    $percentBeforeLastWeek = (abs((count($rowsTwoPeriod) - count($rowsPeriod))) * 100)  / $divider;
+    $percentLastWeek = (count($rowsPeriod) * 100) / $divider;
 
     return number_format($percentLastWeek - $percentBeforeLastWeek, 2) ;
   }

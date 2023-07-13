@@ -593,3 +593,29 @@
     overflow-y: auto;
   }
 }
+label[for=profile-image] {
+  width: 138px;
+  height: 138px;
+  border: 2px solid #000;
+  border-radius: 12px;
+  background-image: url(../../b38390d2d6325d430ec9.png) !important;
+  background-origin: border-box;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  cursor: pointer;
+  position: relative;
+}
+
+label[for=profile-image]::after {
+  content: "200x200";
+  position: absolute;
+  top: 80%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 1rem;
+  color: #000;
+  text-align: center;
+}
